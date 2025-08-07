@@ -12,6 +12,10 @@ def divide(a, b):
         return "Error: Cannot divide by zero."
     return a / b
 
+def square(a):
+    return a*a
+
+
 def calculator():
     print("Simple Calculator")
     print("Select operation:")
@@ -19,10 +23,11 @@ def calculator():
     print("2. Subtract (-)")
     print("3. Multiply (*)")
     print("4. Divide (/)")
+    print("5. Square (x^2)")
 
-    choice = input("Enter choice (1/2/3/4): ")
+    choice = input("Enter choice (1/2/3/4/5): ")
 
-    if choice not in ["1", "2", "3", "4"]:
+    if choice not in ["1", "2", "3", "4","5"]:
         print("Invalid input.")
         return
 
@@ -41,6 +46,8 @@ def calculator():
         print(f"{num1} * {num2} = {multiply(num1, num2)}")
     elif choice == "4":
         print(f"{num1} / {num2} = {divide(num1, num2)}")
+    elif choice == "5":
+        print(f"{num1} squared = {square(num1)}")
 
 if __name__ == "__main__":
     calculator()
